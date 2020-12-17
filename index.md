@@ -1,37 +1,57 @@
-## Welcome to GitHub Pages
+# ESP32_WebThings_waliamriou_Template
+ Template to implement webthings at Espressif ESP32 boards by ESP-IDF framework 
 
-You can use the [editor on GitHub](https://github.com/walidamriou/ESP32_WebThings_waliamriou_Template/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### WebThings
+Web of things (WoT) is subset of IoT, where the communication is limited to web technologies, WoT is giving connected devices URLs on the World Wide Web.
 
-### Markdown
+### Tools used in this project
+- VScode (to coding)
+- Platformio (to compile and upload the code to ESP32 board)
+- Postman (To test, send requestes to the device, and prototyping the project)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### API
+_REST API links_    
+For current implementation, the {ip} is 192.168.4.1    
 
-```markdown
-Syntax highlighted code block
+{ip}/walidamriou/about  
+{ip}/walidamriou/CurrentStatus  
+{ip}/walidamriou/config  
 
-# Header 1
-## Header 2
-### Header 3
+__* GET {ip}/walidamriou/about__  
+When you send request to {ip}/walid/about you will get a reponse with the information about the device:  
+     - The Name of the device: Walid Amriou Device  
+     - Developer: Walid Amriou  
+     - Firmware version: 1.0.0  
+     - Chip: Espressif Systems ESP32 PICO (4M)  
 
-- Bulleted
-- List
+__* GET {ip}/walidamriou/data__ 
+When you send request to {ip}/TiniriSignalGenerator/data , you will get a reponse with the information about the current data status :  
+     - Data1: Data  
+     - Data2: Data 
+     - Data3: 5646848   
+     - Data4: 563.23  
+     
+__* POST {ip}/walidamriou/config__  
+When you send request to {ip}/TiniriSignalGenerator/CurrentStatus , you will change the configuration of the system 
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+I have used JSON structure for all the structure of information and configuration  
 
-[Link](url) and ![Image](src)
-```
+### Copyright CC 2020 Walid Amriou
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
 
-### Jekyll Themes
+__You are free to:__
+- __Share__ copy and redistribute the material in any medium or format
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/walidamriou/ESP32_WebThings_waliamriou_Template/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+__Under the following terms:__
+- __Attribution__ You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 
-### Support or Contact
+- __NonCommercial__ You may not use the material for commercial purposes.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- __NoDerivatives__ If you remix, transform, or build upon the material, you may not distribute the modified material.
+
+- __No additional restrictions__ You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+the software or Code or Scripts or any files in this source is provided "as is" and the author disclaims all warranties with regard to this files including all implied warranties of merchantability and fitness. in no event shall the author be liable for any special, direct, indirect, or consequential damages or any damages whatsoever resulting from loss of use, data or profits, whether in an action of contract, negligence or other tortious action, arising out of or in connection with the use or performance of this software or code or scripts or any files in this source.
