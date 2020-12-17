@@ -2,6 +2,14 @@
  Template to implement webthings at Espressif ESP32 boards by ESP-IDF framework 
 
 
+### WebThings
+Web of things (WoT) is subset of IoT, where the communication is limited to web technologies, WoT is giving connected devices URLs on the World Wide Web.
+
+### Tools used in this project
+- VScode (to coding)
+- Platformio (to compile and upload the code to ESP32 board)
+- Postman (To test, send requestes to the device, and prototyping the project)
+
 ### API
 _REST API links_    
 For current implementation, the {ip} is 192.168.4.1    
