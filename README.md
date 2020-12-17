@@ -10,6 +10,9 @@ Web of things (WoT) is subset of IoT, where the communication is limited to web 
 - Platformio (to compile and upload the code to ESP32 board)
 - Postman (To test, send requestes to the device, and prototyping the project)
 
+### Note
+If you build & upload directly the current project you will get wifi access point in your esp32 board, with name: Walid Amriou WebThings device and password 123456789, but if you want to use this template to build your one sensor or device that connect to wifi so use wifi lib from this project: https://github.com/walidamriou/WalidAmriou_ESP_IoT
+
 ### API
 _REST API links_    
 For current implementation, the {ip} is 192.168.4.1    
@@ -19,21 +22,21 @@ For current implementation, the {ip} is 192.168.4.1
 {ip}/walidamriou/config  
 
 __* GET {ip}/walidamriou/about__  
-When you send request to {ip}/walid/about you will get a reponse with the information about the device:  
+When you send request to {ip}/walidamriou/about you will get a reponse with the information about the device:  
      - The Name of the device: Walid Amriou Device  
      - Developer: Walid Amriou  
      - Firmware version: 1.0.0  
      - Chip: Espressif Systems ESP32 PICO (4M)  
 
 __* GET {ip}/walidamriou/data__ 
-When you send request to {ip}/TiniriSignalGenerator/data , you will get a reponse with the information about the current data status :  
+When you send request to {ip}/walidamriou/data , you will get a reponse with the information about the current data status :  
      - Data1: Data  
      - Data2: Data 
      - Data3: 5646848   
      - Data4: 563.23  
      
 __* POST {ip}/walidamriou/config__  
-When you send request to {ip}/TiniriSignalGenerator/CurrentStatus , you will change the configuration of the system 
+When you send request to {ip}/walidamriou/CurrentStatus , you will change the configuration of the system 
 
 
 I have used JSON structure for all the structure of information and configuration  
